@@ -118,22 +118,10 @@ const Footer = () => {
   const renderProjectInfo = React.useCallback((gridArea?: GridProps['gridArea']) => {
     return (
       <Box gridArea={ gridArea }>
-        <Link fontSize="xs" href="https://www.blockscout.com">blockscout.com</Link>
+        <Link fontSize="xs" href="https://kbcfoundation.com/">kbcfoundation.com</Link>
         <Text mt={ 3 } fontSize="xs">
-          Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+          KBC scan is a tool for inspecting and analyzing KBC blockchains. KBC explorer for KBC Networks.
         </Text>
-        <VStack spacing={ 1 } mt={ 6 } alignItems="start">
-          { apiVersionUrl && (
-            <Text fontSize="xs">
-              Backend: <Link href={ apiVersionUrl } target="_blank">{ backendVersionData?.backend_version }</Link>
-            </Text>
-          ) }
-          { frontendLink && (
-            <Text fontSize="xs">
-              Frontend: { frontendLink }
-            </Text>
-          ) }
-        </VStack>
       </Box>
     );
   }, [ apiVersionUrl, backendVersionData?.backend_version, frontendLink ]);
